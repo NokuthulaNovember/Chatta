@@ -1,0 +1,31 @@
+page-profile {
+    .home{
+        background-image: url('../../assets/imgs/nice.png');
+        background-repeat :no-repeat;
+        background-size:1500px;
+     }
+     button{
+        height:5000px; 
+        width:100px; 
+        margin: -20px -50px; 
+        position:center;
+        top:50%; 
+    border-radius: 100%;
+     }
+     .p{
+        background-color: burlywood;
+        color:beige;
+        
+    }
+    .t{
+        color:beige;
+        background-color: burlywood;
+        border-radius: 10px;
+    }
+    ion-icon {
+        padding: 10px;
+        font-size: 20px;
+        color: burlywood;
+        border-radius:10px;
+      }
+}

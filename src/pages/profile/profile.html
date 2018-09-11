@@ -1,0 +1,46 @@
+<ion-header>
+
+  <ion-navbar color="Thuli">
+    <ion-title>profile</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="home" padding>
+  <ion-list>
+    <ion-list-header class="t">
+      Personal Information
+    </ion-list-header>
+    <ion-item  class="t" (click)="updateName(name)">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6>Name</ion-col>
+          <ion-col col-6 *ngIf="userProfile?.firstName || userProfile?.lastName">
+            {{userProfile?.firstName}} {{userProfile?.lastName}}
+          </ion-col>
+          <ion-col col-6 *ngIf="!userProfile?.firstName || !userProfile?.lastName">
+            <span>Tap here to edit</span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    <ion-item  class="t">
+      <ion-label color="beige">Date of Birth</ion-label>
+      <ion-datetime displayFormat="MMM D, YYYY" pickerFormt="D MMM YYY" [(ngModel)]="birthDate" (ionChange)="updateDOB(birthDate)"></ion-datetime>  
+    </ion-item>
+    <ion-item  class="t" (click)="updatePassword()">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6>Pasword</ion-col>
+          <ion-col col-6>
+            <span>Tap here to edit</span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+
+

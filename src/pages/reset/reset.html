@@ -1,0 +1,24 @@
+<!--
+  Generated template for the ResetPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>reset</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="home" padding>
+  <ion-item>
+    <ion-label stacked>Email</ion-label>
+    <ion-input [(ngModel)]="email" placeholder="your email address"></ion-input>
+  </ion-item>
+
+  <!-- <button ion-button block *ngIf="!emailsent" ng-click="resetPassword()"></button> -->
+  <button ion-button block (click)="resetPassword">Reset password</button>
+</ion-content>

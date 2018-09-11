@@ -1,0 +1,49 @@
+<!--
+ Generated template for the RoomsPage page.
+
+ See http://ionicframework.com/docs/components/#navigation for more info on
+ Ionic pages and navigation.
+-->
+<ion-header >
+  <ion-navbar color="Thuli">
+    <ion-title>
+     
+    </ion-title >
+    
+    
+    <ion-buttons end>
+      
+      <button ion-button icon-only (click)="exitChat()">
+        <ion-icon name="exit"></ion-icon>
+      </button>
+      
+
+    </ion-buttons>
+    
+  </ion-navbar>
+</ion-header>
+<ion-header>
+
+    <ion-navbar color="Thuli">
+      <ion-title>Rooms</ion-title>
+      <ion-buttons end>
+          <button ion-button icon-only (click)="profile()"><ion-icon name="person"></ion-icon></button>
+          <button ion-button icon-only (click)="logout()"><ion-icon name="log-out"></ion-icon></button>
+          <button ion-button icon-only (click)="createRooom()"><ion-icon name="add"></ion-icon></button>
+        </ion-buttons>
+    </ion-navbar>
+  
+   </ion-header>
+   
+   
+   <ion-content class="home" padding>
+     
+   <ion-list no-lines>
+     <ion-item  class="t" *ngFor="let chat of chatRoomsList"(click)="joinRoom(chatRoom.id)" no-lines>
+       <h2 class="n">
+         {{chat.name}}
+       </h2>
+       <ion-icon name="chatbubbles" item-end></ion-icon>
+     </ion-item>
+   </ion-list>
+   </ion-content>
